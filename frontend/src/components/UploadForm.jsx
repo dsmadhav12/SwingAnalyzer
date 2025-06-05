@@ -29,11 +29,12 @@ export default function UploadForm() {
     <div className="max-w-md mx-auto p-6 mt-10 bg-white rounded-lg shadow-md border border-gray-200">
       <h2 className="text-2xl font-bold mb-4 text-center text-green-700">Upload Your Swing</h2>
       <input
-        type="file"
-        accept="video/*"
-        onChange={(e) => setVideo(e.target.files[0])}
-        className="w-full mb-4"
-      />
+  type="file"
+  accept="video/*"
+  onChange={(e) => setVideo(e.target.files[0])}
+  className="block w-full text-sm text-gray-700 bg-gray-100 rounded border border-gray-300 cursor-pointer p-2 mb-4"
+/>
+      
       <button
         onClick={handleUpload}
         className="w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded"
