@@ -32,7 +32,11 @@ export default function UploadForm() {
   type="file"
   accept="video/*"
   onChange={(e) => setVideo(e.target.files[0])}
-  className="block w-full text-sm text-gray-700 bg-gray-100 rounded border border-gray-300 cursor-pointer p-2 mb-4"
+  className="block w-full text-sm text-gray-800 file:mr-4 file:py-2 file:px-4
+             file:rounded file:border-0
+             file:text-sm file:font-semibold
+             file:bg-green-100 file:text-green-700
+             hover:file:bg-green-200 mb-4"
 />
       
       <button
