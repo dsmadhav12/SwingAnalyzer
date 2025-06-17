@@ -2,11 +2,12 @@ import { signInWithPopup, auth, provider } from "../firebase";
 import './SignIn.css';
 export default function SignIn({ onSignIn }) {
   const handleGoogleLogin = async () => {
+    console.log("🔥 Sign-in button clicked"); // ✅ Confirm this appears
     try {
       const result = await signInWithPopup(auth, provider);
       const user = result.user;
       console.log("✅ Signed in:", user.displayName);
-      onSignIn(user); // Send user to App.jsx
+      onSignIn(user);
     } catch (err) {
       console.error("❌ Sign-in error:", err.message);
     }
