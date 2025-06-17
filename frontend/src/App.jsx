@@ -1,21 +1,19 @@
-import { useState } from 'react';
-import SignIn from './pages/SignIn';
-// import UploadForm from './components/UploadForm'; // keep this for after login
+import { useState } from "react";
+import SignIn from "./pages/SignIn";
+import UploadForm from "./components/UploadForm";
 
 function App() {
-  const [user, setUser] = useState(null); // Replace with Firebase auth later
-
-  const handleSignIn = () => {
-    console.log('🔐 Sign-in clicked — this will trigger Firebase Google Auth soon.');
-    // Example: setUser({ name: 'Madhav Donepudi' }); // Simulated login
-  };
+  const [user, setUser] = useState(null);
 
   return user ? (
-    <div className="p-6">Welcome, {user.name}!</div>
-    // or: <UploadForm />
+    <div className="p-6">
+      <p className="mb-4 text-green-700 font-bold">Welcome, {user.displayName}!</p>
+      <UploadForm />
+    </div>
   ) : (
-    <SignIn onSignInClick={handleSignIn} />
+    <SignIn onSignIn={setUser} />
   );
 }
 
 export default App;
+
