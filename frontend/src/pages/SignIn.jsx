@@ -1,4 +1,3 @@
-console.log("🎯 SignIn component is rendering");
 import { signInWithPopup, auth, provider } from "../firebase";
 import './SignIn.css';
 export default function SignIn({ onSignIn }) {
